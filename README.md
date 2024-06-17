@@ -17,7 +17,20 @@ Link da simulação no <a href="https://wokwi.com/projects/400451221044858881">W
 O Wokwi está com um bug onde se você da uma certa quantidade de zoom algumas funcionalidades não irão aparecer no display.
 
 ## Explicação do Projeto 📖
-
+Este projeto é um sistema de monitoramento ambiental para a Fórmula E que utiliza um microcontrolador Arduino para ler dados de vários sensores e exibi-los em um display LCD e também no Monitor Serial do computador. Os componentes principais incluem:
+<br>
+- Sensor de Temperatura e Umidade (DHT22): Este sensor é usado para medir a temperatura e a umidade do ambiente.
+- Sensor de Luminosidade (LDR): Este sensor mede a intensidade da luz ambiente.
+- Potenciômetro: Este componente é usado para simular uma entrada de velocidade.
+- Sensor de Proximidade Ultrassônico: Utilizado para medir a distância até um objeto próximo.
+- Display LCD com Interface I2C: Um display de cristal líquido usado para exibir os dados coletados pelos sensores.
+- Botões de Controle: São utilizados dois botões para navegar entre as diferentes telas de exibição no display LCD.
+<br>
+O funcionamento do sistema é o seguinte:
+<br>
+- O código no Arduino é responsável por inicializar os componentes, ler os valores dos sensores em intervalos regulares e exibir esses valores no display LCD.
+- O usuário pode navegar entre diferentes telas de informações usando os botões de controle, permitindo a visualização dos dados de temperatura/umidade, luminosidade, velocidade simulada e distância medida.
+- Além da exibição no display LCD, os valores lidos pelos sensores também são enviados para o Monitor Serial do computador, proporcionando uma forma alternativa de visualização e monitoramento.
 <br>
  
 ## Componentes 🛠️
