@@ -27,9 +27,11 @@ Este projeto é um sistema de monitoramento ambiental para a Fórmula E que util
 - Botões de Controle: São utilizados dois botões para navegar entre as diferentes telas de exibição no display LCD.
 <br>
 O funcionamento do sistema é o seguinte:
-- O código no Arduino é responsável por inicializar os componentes, ler os valores dos sensores em intervalos regulares e exibir esses valores no display LCD.
-- O usuário pode navegar entre diferentes telas de informações usando os botões de controle, permitindo a visualização dos dados de temperatura/umidade, luminosidade, velocidade simulada e distância medida.
-- Além da exibição no display LCD, os valores lidos pelos sensores também são enviados para o Monitor Serial do computador, proporcionando uma forma alternativa de visualização e monitoramento.
+<ul>
+    <li>O código no Arduino é responsável por inicializar os componentes, ler os valores dos sensores em intervalos regulares e exibir esses valores no display LCD.</li>
+    <li>O usuário pode navegar entre diferentes telas de informações usando os botões de controle, permitindo a visualização dos dados de temperatura/umidade, luminosidade, velocidade simulada e distância medida.</li>
+    <li>Além da exibição no display LCD, os valores lidos pelos sensores também são enviados para o Monitor Serial do computador, proporcionando uma forma alternativa de visualização e monitoramento.</li>
+</ul>
 <br>
  
 ## Componentes 🛠️
