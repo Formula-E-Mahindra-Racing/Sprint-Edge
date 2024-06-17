@@ -73,25 +73,25 @@ Assim como também é preciso declarar, iniciando tais valores para podermos us�
 #define BTN_NEXT 8
 #define BTN_PREV 9
 ```
-<hr>
 
 Estas linhas definem os pinos utilizados para conectar os diversos componentes ao microcontrolador. Os sensores e componentes incluem o sensor DHT, o sensor de luminosidade (LDR), um potenciômetro, um sensor de proximidade (usando o ultrassônico), e os botões de controle (próximo e anterior).
+<hr>
 
 ```c
 DHT dht(DHTPIN, DHTTYPE);
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 ```
-<hr>
 
 Aqui são criadas instâncias dos objetos para interagir com os componentes. Um objeto dht é criado para interagir com o sensor DHT utilizando os pinos definidos anteriormente, e outro objeto lcd é criado para interagir com o display LCD utilizando a interface I2C.
+<hr>
 
 ```c
 int currentScreen = 0;
 int numScreens = 4;
 ```
-<hr>
 
 São definidas duas variáveis inteiras. currentScreen armazena o índice da tela atual que está sendo exibida no LCD, e numScreens define o número total de telas disponíveis.
+<hr>
 
  ## Funções 🛠️
 ```c
@@ -115,9 +115,9 @@ void setup() {
   lcd.backlight();
 }
 ```
-<hr>
 
 No método setup(), a comunicação serial é iniciada a uma taxa de 9600 bauds. Os pinos são configurados conforme definido anteriormente: LDRPIN e POTPIN como entradas analógicas, TRIGPIN como saída digital, e ECHOPIN, BTN_NEXT e BTN_PREV como entradas digitais com resistores de pull-up internos. Em seguida, o sensor DHT é inicializado e o display LCD é inicializado e a luz de fundo é ligada.
+<hr>
 
 ```c
 void loop() {
@@ -130,9 +130,9 @@ void loop() {
     delay(200); // Debounce
   }
 ```
-<hr>
 
 No loop principal (loop()), os botões são verificados. Se o botão "Próximo" for pressionado, currentScreen é incrementado para avançar para a próxima tela (e retorna para a primeira tela se estiver na última). O mesmo é feito para o botão "Anterior", exceto que currentScreen é decrementado.
+<hr>
 
 ```c
 float temperature = dht.readTemperature();
@@ -140,9 +140,9 @@ float humidity = dht.readHumidity();
 int ldrValue = analogRead(LDRPIN);
 int potValue = map(analogRead(POTPIN), 0, 1023, 0, 320);
 ```
-<hr>
 
 Os valores dos sensores são lidos. Para o sensor DHT, são lidos os valores de temperatura e umidade. Para o LDR, é feita uma leitura analógica da luminosidade. Para o potenciômetro, é feita uma leitura analógica e mapeada para um intervalo de 0 a 320, representando uma faixa de velocidade em km/h.
+<hr>
 
 ```c
 long duration, distance;
@@ -154,9 +154,9 @@ digitalWrite(TRIGPIN, LOW);
 duration = pulseIn(ECHOPIN, HIGH);
 distance = (duration / 2) / 29.1;
 ```
-<hr>
 
 Para o sensor de proximidade, é enviado um pulso ultrassônico através do pino de gatilho (TRIGPIN), e a duração do pulso de retorno é medida pelo pino de eco (ECHOPIN). Essa duração é convertida em distância em centímetros e armazenada na variável distance.
+<hr>
 
 ```c
 lcd.clear();
@@ -191,9 +191,9 @@ lcd.clear();
       break;
   }
 ```
-<hr>
 
 O display LCD é limpo e, dependendo do valor de currentScreen, diferentes informações são exibidas. Cada case do switch corresponde a uma tela diferente, temperatura e umidade, luminosidade, velocidade e distância respectivamente.
+<hr>
 
 ```c
 Serial.print("LDR: ");
@@ -211,10 +211,9 @@ Serial.println("%");
 
 delay(1000);
 ```
-<hr>
-
 As informações lidas dos sensores são exibidas no Monitor Serial. Há um atraso de 1 segundo antes de iniciar a próxima iteração do loop. Isso controla a taxa de atualização das leituras dos sensores e a exibição nos displays.
 <br>
+<hr>
 
 A função `loop()` que retorna void, servirá como o ciclo de vida inteiro do projeto, é uma função que por padrão roda infinitamente até algo dentro ou fora do código pará-lo.
 Aqui, vamos chamar nossas funções principais já declaradas para termos uma melhor leitura e manutenção do código.
