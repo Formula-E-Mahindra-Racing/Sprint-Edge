@@ -11,7 +11,7 @@
  
 <img src="https://github.com/Formula-E-Mahindra-Racing/Sprint1-Edge/blob/main/arduino-sketch.png" alt="print do circuito Arduino/printscreen Arduino circuit"/>
 
-Link da simulação no <a href="path">Wokwi</a>
+Link da simulação no <a href="https://wokwi.com/projects/400451221044858881">Wokwi</a>
 
 ## Instruções
 O Wokwi está com um bug onde se você da uma certa quantidade de zoom algumas funcionalidades não irão aparecer no display.
