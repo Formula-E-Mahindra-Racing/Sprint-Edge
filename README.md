@@ -57,7 +57,7 @@ O funcionamento do sistema é o seguinte:
  
 <br>
 
-## Explicando o <a href="path">Código</a> 🧑‍💻
+## Explicando o <a href="https://github.com/Formula-E-Mahindra-Racing/Sprint1-Edge/blob/main/arduino-code.cc">Código</a> 🧑‍💻
  
 Precisamos incluir as bibliotecas para podermos ter acesso a métodos dos quais vamos precisar.
  
