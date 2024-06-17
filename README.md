@@ -9,7 +9,7 @@
     <li>Pedro Henrique Mendes (RM555332)</li>
 </ul>
  
-<img src="path" alt="print do circuito Arduino/printscreen Arduino circuit"/>
+<img src="https://github.com/Formula-E-Mahindra-Racing/Sprint1-Edge/blob/main/arduino-sketch.png" alt="print do circuito Arduino/printscreen Arduino circuit"/>
 
 Link da simulação no <a href="path">Wokwi</a>
 
