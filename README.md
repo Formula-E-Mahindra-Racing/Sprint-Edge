@@ -220,4 +220,4 @@ A função `loop()` que retorna void, servirá como o ciclo de vida inteiro do p
 Aqui, vamos chamar nossas funções principais já declaradas para termos uma melhor leitura e manutenção do código.
 <hr>
 
-<center>Este projeto encontra sob a <a href="path">MIT License.</a></center>
+<center>Este projeto encontra sob a <a href="https://github.com/Formula-E-Mahindra-Racing/Sprint1-Edge/blob/main/LICENSE">MIT License.</a></center>
