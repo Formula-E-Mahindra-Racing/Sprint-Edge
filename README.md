@@ -27,7 +27,7 @@ Este projeto consiste em dois componentes principais:
 <ul>
     <li>ESP32</li>
     <li>DHT11/22</li>
-    <li>LDR</li>
+    <li>LED</li>
     <li>Potenciomêtros</li>
 </ul>
  
