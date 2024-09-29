@@ -19,8 +19,8 @@ O Wokwi está com um bug onde se você da uma certa quantidade de zoom algumas f
 ## Explicação do Projeto 📖
 Este projeto consiste em dois componentes principais:
 <ul>
-    <li> `fiware_IOT.cc`: Código para um dispositivo IoT baseado em ESP32 que lê dados de sensores (como DHT e luminosidade), conecta-se a uma rede Wi-Fi e publica/recebe informações de um Broker MQTT.</li>
-    <li> `web_paho.py`: Um servidor web em Flask que exibe os dados do dispositivo IoT em gráficos em tempo real, utilizando WebSockets para comunicação em tempo real e Paho MQTT para receber dados do dispositivo.</li>
+    <li> `fiware_IOT.cc` : Código para um dispositivo IoT baseado em ESP32 que lê dados de sensores (como DHT e luminosidade), conecta-se a uma rede Wi-Fi e publica/recebe informações de um Broker MQTT.</li>
+    <li> `web_paho.py` : Um servidor web em Flask que exibe os dados do dispositivo IoT em gráficos em tempo real, utilizando WebSockets para comunicação em tempo real e Paho MQTT para receber dados do dispositivo.</li>
 </ul>
  
 ## Componentes 🛠️
