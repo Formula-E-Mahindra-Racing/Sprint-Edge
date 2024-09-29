@@ -44,24 +44,24 @@ Este projeto consiste em dois componentes principais:
  
 <br>
  
-###`fiware_IOT.cc`
+### `fiware_IOT.cc`
 Este código é responsável por conectar o dispositivo IoT à rede Wi-Fi e ao Broker MQTT para enviar e receber dados dos sensores e controlar o estado de saída do dispositivo (como o LED onboard).
 
 **Principais Funcionalidades**:
 <ul>
-    <li>**Wi-Fi**: Conexão com a rede Wi-Fi utilizando o nome e senha configurados.</li>
-    <li>**MQTT**: Publicação e assinatura em tópicos MQTT para enviar dados de sensores e receber comandos do broker.</li>
-    <li>**Tópicos utilizados**:</li>
+    <li>Wi-Fi: Conexão com a rede Wi-Fi utilizando o nome e senha configurados.</li>
+    <li>MQTT: Publicação e assinatura em tópicos MQTT para enviar dados de sensores e receber comandos do broker.</li>
+    <li>Tópicos utilizados:</li>
         <ul>
-            <li>**/TEF/device010/attrs**: Publica o estado do dispositivo.</li>
-            <li>**/TEF/device010/attrs/p**: Publica o valor da luminosidade (potenciômetro).</li>
-            <li>**/TEF/device010/attrs/dht**: Publica dados do sensor DHT (temperatura e umidade).</li>
-            <li>**/TEF/device010/cmd**: Recebe comandos para controlar o dispositivo (ex: ligar/desligar LED).</li>
+            <li>/TEF/device010/attrs: Publica o estado do dispositivo.</li>
+            <li>/TEF/device010/attrs/p: Publica o valor da luminosidade (potenciômetro).</li>
+            <li>/TEF/device010/attrs/dht: Publica dados do sensor DHT (temperatura e umidade).</li>
+            <li>/TEF/device010/cmd: Recebe comandos para controlar o dispositivo (ex: ligar/desligar LED).</li>
         </ul>
-    <li>**DHT22**: Leitura de temperatura e umidade usando o sensor DHT22.</li>
-    <li>**Luminosidade**: Lê valores de luminosidade simulados e os publica no Broker MQTT.</li>
-    <li>**Callback MQTT**: Executa ações com base em mensagens recebidas, como ligar/desligar o LED onboard.</li>
-    <li>**Gerenciamento de Conexões**: Reconecta automaticamente ao Wi-Fi e ao Broker MQTT em caso de desconexão.</li>
+    <li>DHT22: Leitura de temperatura e umidade usando o sensor DHT22.</li>
+    <li>Luminosidade: Lê valores de luminosidade simulados e os publica no Broker MQTT.</li>
+    <li>Callback MQTT: Executa ações com base em mensagens recebidas, como ligar/desligar o LED onboard.</li>
+    <li>Gerenciamento de Conexões: Reconecta automaticamente ao Wi-Fi e ao Broker MQTT em caso de desconexão.</li>
 </ul>
 
 <br>
@@ -84,10 +84,10 @@ Este código implementa um servidor web que utiliza Flask para servir uma págin
 
 **Principais Funcionalidades**:
 <ul>
-    <li>**MQTT**: Assina os tópicos `/TEF/device010/attrs/p` (potenciômetro) e `/TEF/device010/attrs/dht` (DHT) e atualiza a página web com os dados recebidos.</li>
-    <li>**WebSocket**: Utiliza SocketIO para enviar os dados recebidos via MQTT para a interface do usuário em tempo real.</li>
-    <li>**Gráficos em Tempo Real**: Utiliza o Chart.js para exibir gráficos de "gauge" (medidores) para a velocidade (potenciômetro), temperatura e umidade.</li>
-    <li>**Página Web**: Interface web com Bootstrap para layout e gráficos para visualização dos dados.</li>
+    <li>MQTT: Assina os tópicos `/TEF/device010/attrs/p` (potenciômetro) e `/TEF/device010/attrs/dht` (DHT) e atualiza a página web com os dados recebidos.</li>
+    <li>WebSocket: Utiliza SocketIO para enviar os dados recebidos via MQTT para a interface do usuário em tempo real.</li>
+    <li>Gráficos em Tempo Real: Utiliza o Chart.js para exibir gráficos de "gauge" (medidores) para a velocidade (potenciômetro), temperatura e umidade.</li>
+    <li>Página Web: Interface web com Bootstrap para layout e gráficos para visualização dos dados.</li>
 </ul>
 
 ## Como Usar
