@@ -53,10 +53,10 @@ Este código é responsável por conectar o dispositivo IoT à rede Wi-Fi e ao B
     <li>MQTT: Publicação e assinatura em tópicos MQTT para enviar dados de sensores e receber comandos do broker.</li>
     <li>Tópicos utilizados:</li>
         <ul>
-            <li>/TEF/device010/attrs: Publica o estado do dispositivo.</li>
-            <li>/TEF/device010/attrs/p: Publica o valor da luminosidade (potenciômetro).</li>
-            <li>/TEF/device010/attrs/dht: Publica dados do sensor DHT (temperatura e umidade).</li>
-            <li>/TEF/device010/cmd: Recebe comandos para controlar o dispositivo (ex: ligar/desligar LED).</li>
+            <li>`/TEF/device010/attrs`: Publica o estado do dispositivo.</li>
+            <li>`/TEF/device010/attrs/p`: Publica o valor da luminosidade (potenciômetro).</li>
+            <li>`/TEF/device010/attrs/dht`: Publica dados do sensor DHT (temperatura e umidade).</li>
+            <li>`/TEF/device010/cmd`: Recebe comandos para controlar o dispositivo (ex: ligar/desligar LED).</li>
         </ul>
     <li>DHT22: Leitura de temperatura e umidade usando o sensor DHT22.</li>
     <li>Luminosidade: Lê valores de luminosidade simulados e os publica no Broker MQTT.</li>
@@ -79,7 +79,7 @@ Este código é responsável por conectar o dispositivo IoT à rede Wi-Fi e ao B
  
 <br>
 
-###`web_paho.py`
+### `web_paho.py`
 Este código implementa um servidor web que utiliza Flask para servir uma página HTML que exibe os dados recebidos do dispositivo IoT em tempo real.
 
 **Principais Funcionalidades**:
@@ -99,10 +99,12 @@ Este código implementa um servidor web que utiliza Flask para servir uma págin
     <li>O dispositivo começará a publicar os dados dos sensores DHT e luminosidade para os tópicos configurados, além de receber comandos para ligar/desligar o LED.</li>
 </ul>
 
-### 2. Servidor Web (web_paho.py)
-- Instale as dependências do Python: `Flask`, `Flask-SocketIO`, `Paho-MQTT`.
-- Execute o arquivo `web_paho.py` para iniciar o servidor web.
-- Acesse `http://localhost:5000` em seu navegador para visualizar os dados em tempo real.
+### 2. Servidor Web (`web_paho.py`)
+<ul>
+    <li>Instale as dependências do Python: `Flask`, `Flask-SocketIO`, `Paho-MQTT`. </li>
+    <li>Execute o arquivo `web_paho.py` para iniciar o servidor web.</li>
+    <li>Acesse `http://localhost:5000` em seu navegador para visualizar os dados em tempo real.</li>
+</ul>
 
 ## Estrutura de Tópicos MQTT
 
