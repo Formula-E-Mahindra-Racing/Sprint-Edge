@@ -101,9 +101,9 @@ Este código implementa um servidor web que utiliza Flask para servir uma págin
 
 ### 2. Servidor Web (`web_paho.py`)
 <ul>
-    <li>Instale as dependências do Python: `Flask`, `Flask-SocketIO`, `Paho-MQTT`. </li>
-    <li>Execute o arquivo `web_paho.py` para iniciar o servidor web.</li>
-    <li>Acesse `http://localhost:5000` em seu navegador para visualizar os dados em tempo real.</li>
+    <li>Instale as dependências do Python: Flask, Flask-SocketIO, Paho-MQTT. </li>
+    <li>Execute o arquivo web_paho.py para iniciar o servidor web.</li>
+    <li>Acesse http://localhost:5000 em seu navegador para visualizar os dados em tempo real.</li>
 </ul>
 
 ## Estrutura de Tópicos MQTT
