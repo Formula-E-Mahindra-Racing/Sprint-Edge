@@ -1,4 +1,4 @@
-# Sprint 2 - Edge Computing
+# Sprint 3 - Edge Computing
 
 ## Integrantes 👋
 <ul>
