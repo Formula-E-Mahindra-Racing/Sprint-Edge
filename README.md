@@ -19,8 +19,8 @@ O Wokwi está com um bug onde se você da uma certa quantidade de zoom algumas f
 ## Explicação do Projeto 📖
 Este projeto consiste em dois componentes principais:
 <ul>
-    <li> `fiware_IOT.cc` : Código para um dispositivo IoT baseado em ESP32 que lê dados de sensores (como DHT e luminosidade), conecta-se a uma rede Wi-Fi e publica/recebe informações de um Broker MQTT.</li>
-    <li> `web_paho.py` : Um servidor web em Flask que exibe os dados do dispositivo IoT em gráficos em tempo real, utilizando WebSockets para comunicação em tempo real e Paho MQTT para receber dados do dispositivo.</li>
+    <li>fiware_IOT.cc: Código para um dispositivo IoT baseado em ESP32 que lê dados de sensores (como DHT e luminosidade), conecta-se a uma rede Wi-Fi e publica/recebe informações de um Broker MQTT.</li>
+    <li>web_paho.py: Um servidor web em Flask que exibe os dados do dispositivo IoT em gráficos em tempo real, utilizando WebSockets para comunicação em tempo real e Paho MQTT para receber dados do dispositivo.</li>
 </ul>
  
 ## Componentes 🛠️
@@ -53,10 +53,10 @@ Este código é responsável por conectar o dispositivo IoT à rede Wi-Fi e ao B
     <li>MQTT: Publicação e assinatura em tópicos MQTT para enviar dados de sensores e receber comandos do broker.</li>
     <li>Tópicos utilizados:</li>
         <ul>
-            <li>`/TEF/device010/attrs`: Publica o estado do dispositivo.</li>
-            <li>`/TEF/device010/attrs/p`: Publica o valor da luminosidade (potenciômetro).</li>
-            <li>`/TEF/device010/attrs/dht`: Publica dados do sensor DHT (temperatura e umidade).</li>
-            <li>`/TEF/device010/cmd`: Recebe comandos para controlar o dispositivo (ex: ligar/desligar LED).</li>
+            <li>/TEF/device010/attrs: Publica o estado do dispositivo.</li>
+            <li>/TEF/device010/attrs/p: Publica o valor da luminosidade (potenciômetro).</li>
+            <li>/TEF/device010/attrs/dht: Publica dados do sensor DHT (temperatura e umidade).</li>
+            <li>/TEF/device010/cmd: Recebe comandos para controlar o dispositivo (ex: ligar/desligar LED).</li>
         </ul>
     <li>DHT22: Leitura de temperatura e umidade usando o sensor DHT22.</li>
     <li>Luminosidade: Lê valores de luminosidade simulados e os publica no Broker MQTT.</li>
@@ -84,7 +84,7 @@ Este código implementa um servidor web que utiliza Flask para servir uma págin
 
 **Principais Funcionalidades**:
 <ul>
-    <li>MQTT: Assina os tópicos `/TEF/device010/attrs/p` (potenciômetro) e `/TEF/device010/attrs/dht` (DHT) e atualiza a página web com os dados recebidos.</li>
+    <li>MQTT: Assina os tópicos /TEF/device010/attrs/p (potenciômetro) e /TEF/device010/attrs/dht (DHT) e atualiza a página web com os dados recebidos.</li>
     <li>WebSocket: Utiliza SocketIO para enviar os dados recebidos via MQTT para a interface do usuário em tempo real.</li>
     <li>Gráficos em Tempo Real: Utiliza o Chart.js para exibir gráficos de "gauge" (medidores) para a velocidade (potenciômetro), temperatura e umidade.</li>
     <li>Página Web: Interface web com Bootstrap para layout e gráficos para visualização dos dados.</li>
