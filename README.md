@@ -9,12 +9,12 @@
     <li>Pedro Henrique Mendes (RM555332)</li>
 </ul>
  
-<img src="path" alt="print do circuito Arduino/printscreen Arduino circuit"/>
+<img src="./screenshot ESP32.png" alt="print do circuito Arduino/printscreen Arduino circuit"/>
 
-Link da simulação no <a href="path">Wokwi</a>
+Link da simulação no <a href="[path](https://wokwi.com/projects/410377764841984001)">Wokwi</a>
 
 ## Instruções
-O Wokwi está com um bug onde se você da uma certa quantidade de zoom algumas funcionalidades não irão aparecer no display.
+Para fazer o projeto funcionar primeiro inicie o Wokwi e depois inicie o programa python.
 
 ## Explicação do Projeto 📖
 Este projeto consiste em dois componentes principais:
@@ -33,7 +33,7 @@ Este projeto consiste em dois componentes principais:
  
 <br>
 
-## Explicando o <a href="path">Código</a> 🧑‍💻
+## Explicando o <a href="./fiware_IOT.cc">Código</a> 🧑‍💻
 
 ### Dependências 📦
 <ul>
@@ -66,7 +66,7 @@ Este código é responsável por conectar o dispositivo IoT à rede Wi-Fi e ao B
 
 <br>
 
-## Explicando o <a href="path">Código</a> 🧑‍💻
+## Explicando o <a href="./web_paho.py">Código</a> 🧑‍💻
 
 ### Dependências 📦
 <ul>
