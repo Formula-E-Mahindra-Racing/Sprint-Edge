@@ -11,7 +11,7 @@
  
 <img src="./screenshot ESP32.png" alt="print do circuito Arduino/printscreen Arduino circuit"/>
 
-Link da simulação no <a href="[path](https://wokwi.com/projects/410377764841984001)">Wokwi</a>
+Link da simulação no <a href="https://wokwi.com/projects/410377764841984001">Wokwi</a>
 
 ## Instruções
 Para fazer o projeto funcionar primeiro inicie o Wokwi e depois inicie o programa python.
